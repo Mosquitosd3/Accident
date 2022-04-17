@@ -25,8 +25,8 @@
 
     <title>Accident</title>
 </head>
-<jsp:include page="../navbar/navbar.jsp"/>
 <body>
+<jsp:include page="../navbar/navbar.jsp"/>
 <br>
 <div class="container">
     <div class="row">

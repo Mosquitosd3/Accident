@@ -51,7 +51,7 @@
                             </div>
 
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-info">
+                                <button type="submit" class="btn btn-info btn-sm">
                                     Sign in
                                 </button>
                             </div>
