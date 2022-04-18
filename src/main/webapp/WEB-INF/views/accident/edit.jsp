@@ -23,7 +23,7 @@
 </head>
 <jsp:include page="/WEB-INF/navbar/navbar.jsp"/>
 <br>
-<body>
+<body class="bg-secondary">
 <div class="container">
     <div class="bg-dark text-white">
         <h3><p align="center">Edit accident</p></h3>

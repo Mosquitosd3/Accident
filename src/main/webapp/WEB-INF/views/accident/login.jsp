@@ -25,7 +25,7 @@
 
     <title>Login</title>
 </head>
-<body>
+<body class="bg-secondary">
 <br>
 <main class="login-form">
     <div class="cotainer">

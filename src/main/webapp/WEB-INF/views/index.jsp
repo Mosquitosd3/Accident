@@ -25,7 +25,7 @@
 
     <title>Accident</title>
 </head>
-<body>
+<body class="bg-secondary">
 <jsp:include page="../navbar/navbar.jsp"/>
 <br>
 <div class="container">
