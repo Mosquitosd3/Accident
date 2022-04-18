@@ -57,6 +57,7 @@
                             </div>
                             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                         </form>
+                        <p class="text-center">No account? <a href="<c:url value='/reg'/>">Sign in</a> </p>
                     </div>
                 </div>
             </div>
