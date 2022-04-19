@@ -45,6 +45,11 @@
                     </div>
                     <input name="password" class="form-control" placeholder="Create password" type="password">
                 </div> <!-- form-group// -->
+                <c:if test="${not empty existLogin}">
+                    <div class="form-group bg-danger text-white">
+                        <p align="center"><c:out value="${existLogin}"/></p>
+                    </div>
+                </c:if>
                 <div class="form-group">
                     <button type="submit" class="btn btn-info btn-block"> Create Account  </button>
                 </div> <!-- form-group// -->
