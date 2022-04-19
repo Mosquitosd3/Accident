@@ -24,46 +24,60 @@
 <jsp:include page="/WEB-INF/navbar/navbar.jsp"/>
 <br>
 <body class="bg-secondary">
-<div class="container">
+<div class="container card text-white bg-dark">
     <div class="bg-dark text-white">
         <h3><p align="center">Create accident</p></h3>
     </div>
-    <div class="from-group">
-        <br>
-        <form action="<c:url value='/save'/>" method="post">
-            <div class="form-group">
-                <label>Name</label>
-                <input type="text" class="form-control" name="name" placeholder="New name accident....">
+    <form action="<c:url value='/save'/>" method="post">
+        <!-- User's Credentials  -->
+        <fieldset class="form-group">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <label class="text-info" for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter name.." name="name">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-info" for="email">Text</label>
+                        <textarea type="email" class="form-control email" rows="4" id="email" placeholder="Description..." name="text">
+                        </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="text-info" for="address">Address:</label>
+                        <input type="text" class="form-control password" id="address" placeholder="Address..." name="address">
+                    </div>
+                </div>
+                <fieldset class="form-group">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label class="text-info" for="address">Type:</label>
+                            <select name="type.id" class="custom-select">
+                                <c:forEach var="type" items="${types}" >
+                                    <option value="${type.id}">${type.name}</option>
+                                </c:forEach>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label class="text-info" >Rule:</label>
+                            <select name="rIds" class="custom-select" multiple>
+                                <c:forEach var="rule" items="${rules}" >
+                                    <option value="${rule.id}">${rule.name}</option>
+                                </c:forEach>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
             </div>
-            <div class="form-group">
-                <label>Description</label>
-                <input type="text" class="form-control" name="text" placeholder="New description...">
+        </fieldset>
+        <div class="form-group row">
+            <div class="mx-auto">
+                <button type="submit" class="btn btn-info btn-customized">Save</button>
             </div>
-            <div class="form-group">
-                <label>Address</label>
-                <input type="text" class="form-control" name="address" placeholder="new address...">
-            </div>
-            <div class="form-group">
-                <label>Type</label>
-                <select name="type.id" class="custom-select">
-                    <c:forEach var="type" items="${types}" >
-                        <option value="${type.id}">${type.name}</option>
-                    </c:forEach>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Rule</label>
-                <select name="rIds" class="custom-select" multiple>
-                    <c:forEach var="rule" items="${rules}" >
-                        <option value="${rule.id}">${rule.name}</option>
-                    </c:forEach>
-                </select>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-dark">Save</button>
-            </div>
-        </form>
-    </div>
+        </div>
+    </form>
+</div>
 </div>
 </body>
 </html>
